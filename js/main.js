@@ -109,7 +109,7 @@ const scheduleTitle = document.createElement("h5");
 scheduleTitle.innerText = "Tryck på en av kanalerna för att få upp tablån";
 scheduleContainer.appendChild(scheduleTitle);
 
-fetch('http://api.sr.se/api/v2/channels?format=json')
+fetch('https://api.sr.se/api/v2/channels?format=json')
 .then(response => response.json())
 .then(channelPages => {
   /* ------------------- Loops through all pages of channels ------------------ */
