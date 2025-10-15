@@ -331,8 +331,12 @@ function displaySchedule(channel) {
 function createChannelListItem(channel){
   const channelListItem = document.createElement("li");
   const listItemContent = document.createElement("a");
-  listItemContent.style.display = "block";
+  listItemContent.style.display = "block"; 
+
+  /* ---------------------- Display description on hover ---------------------- */
+  channelListItem.title = channel.tagline;
   /* --------------- Display channel title and schedule on click -------------- */
+ 
   channelListItem.addEventListener('click', function(){
     displaySchedule(channel);
   }, false);
